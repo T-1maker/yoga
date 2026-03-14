@@ -1,459 +1,177 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Центр йоги Сейсин</title>
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-
-const overlay = document.createElement("div");
-overlay.style.position="fixed";
-overlay.style.inset="0";
-overlay.style.background="rgba(0,0,0,0.75)";
-overlay.style.display="flex";
-overlay.style.alignItems="center";
-overlay.style.justifyContent="center";
-overlay.style.zIndex="9999";
-
-overlay.innerHTML = `
-<div style="background:#fff;padding:30px;border-radius:10px;max-width:400px;text-align:center;position:relative">
-
-<button id="closePopup" style="position:absolute;top:10px;right:12px;border:none;background:none;font-size:18px;cursor:pointer">✕</button>
-
-<h3>Cookie Policy</h3>
-
-<p style="font-size:14px;color:#555">
-This website uses cookies to improve your experience.
-</p>
-
-<button id="acceptCookies" style="margin-top:15px;background:#8fb37a;color:#fff;border:none;padding:10px 20px;border-radius:6px;cursor:pointer">
-Accept
-</button>
-
-</div>
-`;
-
-document.body.appendChild(overlay);
-
-document.getElementById("acceptCookies").onclick = function(){
-overlay.remove();
-};
-
-document.getElementById("closePopup").onclick = function(){
-overlay.remove();
-};
-
-});
-</script>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+<title>ZenFlow Yoga Studio</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-
-body{
-font-family:'Noto Sans JP',sans-serif;
-background:#f7f9f5;
-color:#2f3a2f;
-line-height:1.7;
-}
-
-a{text-decoration:none;color:inherit}
-
-.container{
-max-width:1200px;
-margin:auto;
-padding:90px 20px;
-}
-
-header{
-background:#e6efe3;
-position:fixed;
-top:0;
-width:100%;
-z-index:100;
-}
-
-.nav{
-max-width:1200px;
-margin:auto;
-display:flex;
-align-items:center;
-justify-content:space-between;
-padding:15px 20px;
-}
-
-.logo{font-weight:600}
-
-.nav ul{
-display:flex;
-gap:25px;
-list-style:none;
-font-size:14px;
-}
-
-.nav button{
-background:#8fb37a;
-color:#fff;
-border:none;
-padding:8px 18px;
-border-radius:20px;
-cursor:pointer;
-}
-
-.hero{
-margin-top:70px;
-background:#dfe9db;
-text-align:center;
-padding:80px 20px 60px;
-}
-
-.hero img{
-width:100%;
-max-width:700px;
-border-radius:20px;
-}
-
-.hero h1{
-margin:30px 0 15px;
-font-size:30px;
-}
-
-.hero p{
-font-size:15px;
-color:#445;
-}
-
-.section-title{
-text-align:center;
-margin-bottom:50px;
-}
-
-.section-title h2{
-font-size:26px;
-margin-bottom:10px;
-}
-
-.section-title p{
-font-size:14px;
-color:#666;
-}
-
-.cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-gap:25px;
-}
-
-.card{
-background:#fff;
-padding:30px;
-border-radius:16px;
-}
-
-.card i{
-color:#8fb37a;
-font-size:22px;
-margin-bottom:10px;
-}
-
-.list{
-max-width:700px;
-margin:auto;
-font-size:14px;
-color:#555;
-}
-
-.instructors{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:25px;
-}
-
-.instructors img{
-width:100%;
-height:220px;
-object-fit:cover;
-border-radius:16px;
-}
-
-.reviews{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:25px;
-}
-
-.review{
-background:#fff;
-padding:25px;
-border-radius:16px;
-font-size:14px;
-}
-
-.gallery{
-display:grid;
-grid-template-columns:2fr 1fr 1fr;
-gap:20px;
-}
-
-.gallery img{
-width:100%;
-height:100%;
-object-fit:cover;
-border-radius:16px;
-}
-
-.booking{
-background:#dfe9db;
-border-radius:20px;
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:40px;
-padding:50px;
-}
-
-.booking input,
-.booking textarea{
-width:100%;
-padding:12px;
-margin-bottom:10px;
-border-radius:10px;
-border:1px solid #ccc;
-}
-
-.booking button{
-background:#8fb37a;
-border:none;
-color:#fff;
-padding:12px;
-border-radius:20px;
-width:100%;
-cursor:pointer;
-}
-
-footer{
-background:#6b8f5f;
-color:#eaf3e7;
-padding:60px 20px;
-}
-
-.footer-grid{
-max-width:1200px;
-margin:auto;
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:40px;
-font-size:13px;
-}
-
-.copy{
-text-align:center;
-margin-top:40px;
-font-size:12px;
-color:#dbe6d7;
-}
-
-@media(max-width:768px){
-
-.booking{
-grid-template-columns:1fr;
-}
-
-.gallery{
-grid-template-columns:1fr;
-}
-
-.nav ul{
-display:none;
-}
-
-}
-
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Poppins',sans-serif;background:#f4f7f3;color:#2f3a2f;line-height:1.7;}
+.container{max-width:1100px;margin:auto;padding:80px 20px;}
+header{background:#e7efe4;position:fixed;width:100%;top:0;z-index:10;}
+.nav{max-width:1100px;margin:auto;display:flex;justify-content:space-between;align-items:center;padding:15px 20px;}
+.logo{font-weight:600;font-size:18px;}
+.nav ul{display:flex;gap:25px;list-style:none;font-size:14px;}
+.hero{margin-top:70px;background:#dde7d7;text-align:center;padding:90px 20px;}
+.hero img{width:100%;max-width:750px;border-radius:20px;margin-bottom:30px;}
+.hero h1{font-size:32px;margin-bottom:15px;}
+.hero p{color:#555;}
+.section-title{text-align:center;margin-bottom:40px;}
+.section-title h2{font-size:26px;margin-bottom:10px;}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:25px;}
+.card{background:#fff;padding:25px;border-radius:14px;}
+.card h4{margin-bottom:8px;}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;}
+.gallery img{width:100%;border-radius:16px;height:220px;object-fit:cover;}
+.reviews{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;}
+.review{background:#fff;padding:20px;border-radius:12px;font-size:14px;}
+.booking{background:#dde7d7;padding:50px;border-radius:20px;display:grid;grid-template-columns:1fr 1fr;gap:40px;}
+.booking input,.booking textarea{width:100%;padding:12px;margin-bottom:10px;border-radius:8px;border:1px solid #ccc;}
+.booking button{background:#7ea76b;border:none;padding:12px;color:#fff;border-radius:20px;width:100%;cursor:pointer;}
+footer{background:#6d8f60;color:#fff;padding:50px 20px;text-align:center;margin-top:60px;}
+@media(max-width:768px){.booking{grid-template-columns:1fr;}}
 </style>
 </head>
-
 <body>
 
 <header>
 <div class="nav">
-
-<div class="logo">Центр йоги Сейсин</div>
-
+<div class="logo">ZenFlow Yoga</div>
 <ul>
-<li>Дом</li>
-<li>О нас</li>
-<li>Классы</li>
-<li>Инструкторы</li>
-<li>Бронирование</li>
+<li>Home</li>
+<li>About</li>
+<li>Classes</li>
+<li>Gallery</li>
+<li>Contact</li>
 </ul>
-
-<button>Бронирование</button>
-
 </div>
 </header>
 
 <section class="hero">
-
-<img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b">
-
-<h1>Спокойная сессия йоги для гармонизации ума и тела</h1>
-
-<p>Обретите внутреннее спокойствие с помощью дыхательных упражнений</p>
-
+<img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773">
+<h1>Find Balance Through Yoga & Mindfulness</h1>
+<p>Relax your body, clear your mind, and reconnect with yourself.</p>
 </section>
 
 <section class="container">
-
-<div class="section-title">
-<h2>О Центре йоги Сейсин</h2>
-<p>Студия йоги, которая ценит японскую духовность</p>
-</div>
-
-<p class="list">
-Мы предлагаем место, где вы можете отдохнуть от повседневного стресса и восстановить баланс тела и разума.
+<div class="section-title"><h2>About Our Studio</h2></div>
+<p style="max-width:700px;margin:auto;text-align:center;color:#555">
+ZenFlow Yoga Studio offers peaceful classes designed for beginners and experienced practitioners alike. Our focus is on mindful breathing, gentle movement, and creating a calm environment where everyone can recharge.
 </p>
-
 </section>
 
 <section class="container">
-
-<div class="section-title">
-<h2>Наш подход</h2>
-</div>
-
+<div class="section-title"><h2>Our Classes</h2></div>
 <div class="cards">
-
-<div class="card">
-<i class="fa-solid fa-heart"></i>
-<h4>Благополучие</h4>
-<p>Гармония разума и тела</p>
+<div class="card"><h4>Beginner Yoga</h4><p>Perfect for people starting their yoga journey.</p></div>
+<div class="card"><h4>Morning Flow</h4><p>Start the day with energizing stretches and breathing.</p></div>
+<div class="card"><h4>Meditation</h4><p>Guided meditation sessions for inner calm.</p></div>
+<div class="card"><h4>Stress Relief Yoga</h4><p>Gentle yoga practices designed to relax the body.</p></div>
 </div>
-
-<div class="card">
-<i class="fa-solid fa-leaf"></i>
-<h4>Гармония</h4>
-<p>Связь с природой</p>
-</div>
-
-<div class="card">
-<i class="fa-solid fa-users"></i>
-<h4>Сообщество</h4>
-<p>Дружеская атмосфера</p>
-</div>
-
-</div>
-
 </section>
 
 <section class="container">
-
-<div class="section-title">
-<h2>Инструкторы</h2>
-</div>
-
-<div class="instructors">
-
-<img src="https://images.unsplash.com/photo-1552196563-55cd4e45efb3">
-
-<img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597">
-
-</div>
-
-</section>
-
-<section class="container">
-
-<div class="section-title">
-<h2>Отзывы клиентов</h2>
-</div>
-
-<div class="reviews">
-
-<div class="review">
-Теперь я чувствую спокойствие — Танака
-</div>
-
-<div class="review">
-Отличные инструкции — Ямамото
-</div>
-
-<div class="review">
-Я жду каждую неделю занятий — Сато
-</div>
-
-</div>
-
-</section>
-
-<section class="container">
-
-<div class="section-title">
-<h2>Наша деятельность</h2>
-</div>
-
+<div class="section-title"><h2>Studio Moments</h2></div>
 <div class="gallery">
-
-<img src="https://images.unsplash.com/photo-1599447421416-3414500d18a5">
-
-<img src="https://images.unsplash.com/photo-1545389336-cf090694435e">
-
+<img src="https://images.unsplash.com/photo-1518611012118-696072aa579a">
 <img src="https://images.unsplash.com/photo-1593810451137-5dc55105dace">
-
+<img src="https://images.unsplash.com/photo-1599447421416-3414500d18a5">
 </div>
-
 </section>
 
 <section class="container">
+<div class="section-title"><h2>What Our Members Say</h2></div>
+<div class="reviews">
+<div class="review">"Such a relaxing environment. I feel refreshed after every session."</div>
+<div class="review">"The instructors are kind and very supportive."</div>
+<div class="review">"A beautiful place to practice yoga and mindfulness."</div>
+</div>
+</section>
 
+<section class="container">
 <div class="booking">
-
 <div>
-<h3>Сделать бронирование</h3>
-<p>Запишитесь на пробный урок</p>
+<h3>Book a Class</h3>
+<p>Try a free introduction class and experience our studio.</p>
 </div>
-
 <div>
-
-<input placeholder="お名前">
-<input placeholder="メールアドレス">
-
-<textarea rows="4" placeholder="ご質問"></textarea>
-
-<button>Отправить запрос</button>
-
+<input placeholder="Your Name">
+<input placeholder="Email">
+<textarea rows="4" placeholder="Message"></textarea>
+<button>Send Request</button>
 </div>
-
 </div>
-
 </section>
 
 <footer>
-
-<div class="footer-grid">
-
-<div>
-<h4>Центр йоги Сейсин</h4>
-<p>Пространство для гармонии тела и разума</p>
-</div>
-
-<div>
-<h4>Меню</h4>
-<p>Классы<br>Инструкторы</p>
-</div>
-
-<div>
-<h4>Адрес</h4>
-<p>Tokyo, Japan</p>
-</div>
-
-</div>
-
-<div class="copy">
-© 2026 Центр йоги Сейсин
-</div>
-
+<p>© 2026 ZenFlow Yoga Studio</p>
 </footer>
+
+<!-- BIG POPUP -->
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    // Create overlay
+    const popupOverlay = document.createElement("div");
+    popupOverlay.id = "big-popup";
+    popupOverlay.style.position = "fixed";
+    popupOverlay.style.top = 0;
+    popupOverlay.style.left = 0;
+    popupOverlay.style.width = "100%";
+    popupOverlay.style.height = "100%";
+    popupOverlay.style.background = "rgba(0,0,0,0.85)";
+    popupOverlay.style.display = "flex";
+    popupOverlay.style.alignItems = "center";
+    popupOverlay.style.justifyContent = "center";
+    popupOverlay.style.zIndex = 9999;
+
+    // Create popup content
+    const popupContent = document.createElement("div");
+    popupContent.style.background = "#fff";
+    popupContent.style.padding = "40px 30px";
+    popupContent.style.borderRadius = "12px";
+    popupContent.style.maxWidth = "500px";
+    popupContent.style.textAlign = "center";
+    popupContent.style.boxShadow = "0 5px 25px rgba(0,0,0,0.5)";
+    popupContent.innerHTML = `
+        <h2 style="margin-bottom:20px;font-size:28px;color:#333">Special Offer!</h2>
+        <p style="margin-bottom:30px;color:#555;font-size:16px">
+        Join our Yoga Studio today and get your first class free! Click below to claim your spot.
+        </p>
+        <button id="popup-cta" style="
+            background:#7ea76b;
+            color:#fff;
+            border:none;
+            padding:15px 25px;
+            font-size:16px;
+            border-radius:8px;
+            cursor:pointer;
+        ">Claim My Free Class</button>
+        <br><br>
+        <button id="popup-close" style="
+            background:none;
+            border:none;
+            color:#888;
+            font-size:18px;
+            cursor:pointer;
+        ">✕ Close</button>
+    `;
+
+    popupOverlay.appendChild(popupContent);
+    document.body.appendChild(popupOverlay);
+
+    // CTA click action
+    document.getElementById("popup-cta").onclick = function() {
+        window.scrollTo({top: document.querySelector('.booking').offsetTop, behavior: 'smooth'});
+        popupOverlay.remove();
+    };
+
+    // Close button
+    document.getElementById("popup-close").onclick = function() {
+        popupOverlay.remove();
+    };
+});
+</script>
 
 </body>
 </html>
