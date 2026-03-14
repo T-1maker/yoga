@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Центр йоги Сейсин</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+font-family:'Noto Sans JP',sans-serif;
+background:#f7f9f5;
+color:#2f3a2f;
+line-height:1.7;
+}
+
+a{text-decoration:none;color:inherit}
+
+.container{
+max-width:1200px;
+margin:auto;
+padding:90px 20px;
+}
+
+header{
+background:#e6efe3;
+position:fixed;
+top:0;
+width:100%;
+z-index:100;
+}
+
+.nav{
+max-width:1200px;
+margin:auto;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:15px 20px;
+}
+
+.logo{font-weight:600}
+
+.nav ul{
+display:flex;
+gap:25px;
+list-style:none;
+font-size:14px;
+}
+
+.nav button{
+background:#8fb37a;
+color:#fff;
+border:none;
+padding:8px 18px;
+border-radius:20px;
+cursor:pointer;
+}
+
+.hero{
+margin-top:70px;
+background:#dfe9db;
+text-align:center;
+padding:80px 20px 60px;
+}
+
+.hero img{
+width:100%;
+max-width:700px;
+border-radius:20px;
+}
+
+.hero h1{
+margin:30px 0 15px;
+font-size:30px;
+}
+
+.hero p{
+font-size:15px;
+color:#445;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:50px;
+}
+
+.section-title h2{
+font-size:26px;
+margin-bottom:10px;
+}
+
+.section-title p{
+font-size:14px;
+color:#666;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:25px;
+}
+
+.card{
+background:#fff;
+padding:30px;
+border-radius:16px;
+}
+
+.card i{
+color:#8fb37a;
+font-size:22px;
+margin-bottom:10px;
+}
+
+.list{
+max-width:700px;
+margin:auto;
+font-size:14px;
+color:#555;
+}
+
+.instructors{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+}
+
+.instructors img{
+width:100%;
+height:220px;
+object-fit:cover;
+border-radius:16px;
+}
+
+.reviews{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+}
+
+.review{
+background:#fff;
+padding:25px;
+border-radius:16px;
+font-size:14px;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:2fr 1fr 1fr;
+gap:20px;
+}
+
+.gallery img{
+width:100%;
+height:100%;
+object-fit:cover;
+border-radius:16px;
+}
+
+.booking{
+background:#dfe9db;
+border-radius:20px;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+padding:50px;
+}
+
+.booking input,
+.booking textarea{
+width:100%;
+padding:12px;
+margin-bottom:10px;
+border-radius:10px;
+border:1px solid #ccc;
+}
+
+.booking button{
+background:#8fb37a;
+border:none;
+color:#fff;
+padding:12px;
+border-radius:20px;
+width:100%;
+cursor:pointer;
+}
+
+footer{
+background:#6b8f5f;
+color:#eaf3e7;
+padding:60px 20px;
+}
+
+.footer-grid{
+max-width:1200px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:40px;
+font-size:13px;
+}
+
+.copy{
+text-align:center;
+margin-top:40px;
+font-size:12px;
+color:#dbe6d7;
+}
+
+@media(max-width:768px){
+
+.booking{
+grid-template-columns:1fr;
+}
+
+.gallery{
+grid-template-columns:1fr;
+}
+
+.nav ul{
+display:none;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="nav">
+
+<div class="logo">Центр йоги Сейсин</div>
+
+<ul>
+<li>Дом</li>
+<li>О нас</li>
+<li>Классы</li>
+<li>Инструкторы</li>
+<li>Бронирование</li>
+</ul>
+
+<button>Бронирование</button>
+
+</div>
+</header>
+
+<section class="hero">
+
+<img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b">
+
+<h1>Спокойная сессия йоги для гармонизации ума и тела</h1>
+
+<p>Обретите внутреннее спокойствие с помощью дыхательных упражнений</p>
+
+</section>
+
+<section class="container">
+
+<div class="section-title">
+<h2>О Центре йоги Сейсин</h2>
+<p>Студия йоги, которая ценит японскую духовность</p>
+</div>
+
+<p class="list">
+Мы предлагаем место, где вы можете отдохнуть от повседневного стресса и восстановить баланс тела и разума.
+</p>
+
+</section>
+
+<section class="container">
+
+<div class="section-title">
+<h2>Наш подход</h2>
+</div>
+
+<div class="cards">
+
+<div class="card">
+<i class="fa-solid fa-heart"></i>
+<h4>Благополучие</h4>
+<p>Гармония разума и тела</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-leaf"></i>
+<h4>Гармония</h4>
+<p>Связь с природой</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-users"></i>
+<h4>Сообщество</h4>
+<p>Дружеская атмосфера</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="container">
+
+<div class="section-title">
+<h2>Инструкторы</h2>
+</div>
+
+<div class="instructors">
+
+<img src="https://images.unsplash.com/photo-1552196563-55cd4e45efb3">
+
+<img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597">
+
+</div>
+
+</section>
+
+<section class="container">
+
+<div class="section-title">
+<h2>Отзывы клиентов</h2>
+</div>
+
+<div class="reviews">
+
+<div class="review">
+Теперь я чувствую спокойствие — Танака
+</div>
+
+<div class="review">
+Отличные инструкции — Ямамото
+</div>
+
+<div class="review">
+Я жду каждую неделю занятий — Сато
+</div>
+
+</div>
+
+</section>
+
+<section class="container">
+
+<div class="section-title">
+<h2>Наша деятельность</h2>
+</div>
+
+<div class="gallery">
+
+<img src="https://images.unsplash.com/photo-1599447421416-3414500d18a5">
+
+<img src="https://images.unsplash.com/photo-1545389336-cf090694435e">
+
+<img src="https://images.unsplash.com/photo-1593810451137-5dc55105dace">
+
+</div>
+
+</section>
+
+<section class="container">
+
+<div class="booking">
+
+<div>
+<h3>Сделать бронирование</h3>
+<p>Запишитесь на пробный урок</p>
+</div>
+
+<div>
+
+<input placeholder="お名前">
+<input placeholder="メールアドレス">
+
+<textarea rows="4" placeholder="ご質問"></textarea>
+
+<button>Отправить запрос</button>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<div class="footer-grid">
+
+<div>
+<h4>Центр йоги Сейсин</h4>
+<p>Пространство для гармонии тела и разума</p>
+</div>
+
+<div>
+<h4>Меню</h4>
+<p>Классы<br>Инструкторы</p>
+</div>
+
+<div>
+<h4>Адрес</h4>
+<p>Tokyo, Japan</p>
+</div>
+
+</div>
+
+<div class="copy">
+© 2026 Центр йоги Сейсин
+</div>
+
+</footer>
+
+</body>
+</html>
